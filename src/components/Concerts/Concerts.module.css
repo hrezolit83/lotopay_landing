@@ -102,8 +102,78 @@
 }
 
 @media (max-width: 640px) {
-  .table th:nth-child(2),
-  .table td:nth-child(2) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .heading {
+    font-size: 22px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .tableWrap {
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  .table,
+  .table thead,
+  .table tbody,
+  .table tr,
+  .table td,
+  .table th {
+    display: block;
+    width: 100%;
+  }
+
+  .table thead {
     display: none;
+  }
+
+  .table tbody tr {
+    background: #111827;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    padding: 14px 16px;
+    border: 1px solid #1e293b;
+  }
+
+  .table tbody tr:hover {
+    background: #172133;
+  }
+
+  .table td {
+    padding: 6px 0;
+    border-top: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    color: #94a3b8;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    flex-shrink: 0;
+  }
+
+  .table td:last-child {
+    justify-content: center;
+    padding-top: 12px;
+    margin-top: 4px;
+    border-top: 1px solid #1e293b;
+  }
+
+  .buyBtn {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 13px;
   }
 }

@@ -24,10 +24,10 @@ export default function Concerts() {
             <tbody>
               {concerts.map((c, i) => (
                 <tr key={i}>
-                  <td>{c.city}</td>
-                  <td>{c.seats}</td>
-                  <td>{c.date}</td>
-                  <td>
+                  <td data-label="Місто / Заклад">{c.city}</td>
+                  <td data-label="К-сть місць">{c.seats}</td>
+                  <td data-label="Дата і час">{c.date}</td>
+                  <td data-label="">
                     <button
                       className={styles.buyBtn}
                       onClick={() => setSelectedConcert(c)}
