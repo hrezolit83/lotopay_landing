@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /h/Projects/lotopay_landing -name *.png -o -name *.jpg -o -name *.jpeg -o -name *.webp -o -name *.svg -o -name *.pdf)",
+      "Bash(npm run:*)",
+      "Bash(pkill -f \"vite --port 5174\")",
+      "Bash(find H:/Projects/lotopay_landing/src -name *concerts* -o -name *data*)"
+    ]
+  }
+}
