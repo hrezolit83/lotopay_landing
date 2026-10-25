@@ -1,10 +1,10 @@
 import { useMemo, useState } from "react";
 import { formatConcertDate, getUpcomingConcerts } from "../../data/concerts";
-import Modal from "../Modal/Modal";
+import TicketOrder from "../TicketOrder/TicketOrder";
 import styles from "./Concerts.module.css";
 
 export default function Concerts() {
-  const [selectedConcert, setSelectedConcert] = useState(null);
+  const [selectedId, setSelectedId] = useState(null);
   const upcoming = useMemo(() => getUpcomingConcerts(), []);
 
   return (
@@ -36,7 +36,7 @@ export default function Concerts() {
                     <td data-label="">
                       <button
                         className={styles.buyBtn}
-                        onClick={() => setSelectedConcert(c)}
+                        onClick={() => setSelectedId(c.id)}
                       >
                         КУПИТИ КВИТОК
                       </button>
@@ -49,23 +49,11 @@ export default function Concerts() {
         )}
       </div>
 
-      <Modal open={!!selectedConcert} onClose={() => setSelectedConcert(null)}>
-        <div className={styles.modalContent}>
-          <div className={styles.modalIcon}>🎟️</div>
-          <h2>Бронювання успішне!</h2>
-          {selectedConcert && (
-            <>
-              <p className={styles.concertName}>{selectedConcert.city}</p>
-              <p className={styles.concertDate}>
-                {formatConcertDate(selectedConcert.date)}
-              </p>
-            </>
-          )}
-          <p className={styles.modalNote}>
-            Очікуйте підтвердження на вашу пошту.
-          </p>
-        </div>
-      </Modal>
+      <TicketOrder
+        open={selectedId !== null}
+        onClose={() => setSelectedId(null)}
+        concertId={selectedId ?? ""}
+      />
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Modal from "../Modal/Modal";
+import TicketOrder from "../TicketOrder/TicketOrder";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -28,13 +28,7 @@ export default function Hero() {
         </button>
       </div>
 
-      <Modal open={open} onClose={() => setOpen(false)}>
-        <div className={styles.modalContent}>
-          <div className={styles.modalIcon}>🎸</div>
-          <h2>Квиток замовлено!</h2>
-          <p>Очікуйте підтвердження на вашу електронну пошту.</p>
-        </div>
-      </Modal>
+      <TicketOrder open={open} onClose={() => setOpen(false)} />
     </section>
   );
 }

@@ -21,6 +21,13 @@
   animation: slideUp 0.2s ease;
 }
 
+.modalWide {
+  max-width: 440px;
+  text-align: left;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+}
+
 .closeBtn {
   margin-top: 20px;
   background: #dc2626;
