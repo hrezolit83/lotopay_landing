@@ -1,13 +1,15 @@
 import styles from "./Footer.module.css";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.inner}>
           <div className={styles.left}>
             <p className={styles.copy}>
-              © 2025 «Грим та Грім». Всі права захищено.
+              © {year} «Грим та Грім». Всі права захищено.
             </p>
             <div className={styles.contacts}>
               <a
@@ -26,7 +28,8 @@ export default function Footer() {
               href="https://www.instagram.com"
               className={styles.socialLink}
               aria-label="Instagram"
-              target="blanc"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Instagram
             </a>
@@ -35,7 +38,8 @@ export default function Footer() {
               href="https://www.youtube.com"
               className={styles.socialLink}
               aria-label="YouTube"
-              target="blanc"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               YouTube
             </a>
@@ -44,7 +48,8 @@ export default function Footer() {
               href="https://www.facebook.com"
               className={styles.socialLink}
               aria-label="Facebook"
-              target="blanc"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Facebook
             </a>
