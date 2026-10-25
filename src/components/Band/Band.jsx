@@ -1,23 +1,26 @@
+import maksymImg from "../../assets/maksym.jpg";
+import olenaImg from "../../assets/olena.jpg";
+import tarasImg from "../../assets/taras.jpg";
 import styles from "./Band.module.css";
 
 const members = [
   {
     name: "Максим",
     role: "гітара",
-    img: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400&q=70",
-    alt: "Максим — гітарист",
+    img: maksymImg,
+    alt: "Максим, гітарист гурту «Грим та Грім», грає на червоній електрогітарі біля мікрофона на сцені",
   },
   {
     name: "Олена",
     role: "вокал",
-    img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&q=70",
-    alt: "Олена — вокалістка",
+    img: olenaImg,
+    alt: "Олена, вокалістка гурту «Грим та Грім», співає в мікрофон на сцені в променях синього світла",
   },
   {
     name: "Тарас",
     role: "барабани",
-    img: "https://images.unsplash.com/photo-1471478331149-c72f17e33c73?w=400&q=70",
-    alt: "Тарас — барабанщик",
+    img: tarasImg,
+    alt: "Тарас, барабанщик гурту «Грим та Грім», грає на барабанній установці під час концерту",
   },
 ];
 

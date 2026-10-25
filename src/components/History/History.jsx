@@ -1,3 +1,4 @@
+import historyImg from "../../assets/history.jpg";
 import styles from "./History.module.css";
 
 export default function History() {
@@ -32,12 +33,12 @@ export default function History() {
           </div>
           <div className={styles.imgWrap}>
             <img
-              src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=600&q=70"
-              alt="Концерт Грим та Грім"
+              src={historyImg}
+              alt="Переповнена зала на концерті гурту «Грим та Грім»: глядачі з піднятими руками перед освітленою сценою"
               className={styles.img}
               loading="lazy"
               width="600"
-              height="420"
+              height="335"
             />
           </div>
         </div>
