@@ -13,8 +13,9 @@ export default function Contact() {
 
   const onSubmit = async (data) => {
     try {
-      const query = new URLSearchParams(data).toString();
-      await axios.get(`https://jsonplaceholder.typicode.com/posts?${query}`);
+      await axios.post("https://jsonplaceholder.typicode.com/posts", data, {
+        headers: { "Content-Type": "application/json" },
+      });
       toast.success("Повідомлення відправлено!");
       reset();
     } catch {
