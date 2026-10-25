@@ -38,7 +38,7 @@ export default function History() {
               className={styles.img}
               loading="lazy"
               width="600"
-              height="335"
+              height="339"
             />
           </div>
         </div>
