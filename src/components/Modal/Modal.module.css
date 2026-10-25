@@ -40,11 +40,24 @@
   letter-spacing: 0.5px;
   transition: background 0.2s, transform 0.15s;
   width: 100%;
+  min-height: 44px;
 }
 
 .closeBtn:hover {
   background: #b91c1c;
   transform: translateY(-1px);
+}
+
+/* У модалці з формою головна дія — «Замовити», тож «Закрити» робимо другорядним. */
+.modalWide .closeBtn {
+  background: transparent;
+  border: 1px solid #1e293b;
+  color: #94a3b8;
+}
+
+.modalWide .closeBtn:hover {
+  background: #1e293b;
+  color: #fff;
 }
 
 @keyframes fadeIn {

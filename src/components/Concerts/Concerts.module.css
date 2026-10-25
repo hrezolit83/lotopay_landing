@@ -149,7 +149,8 @@
 
   .buyBtn {
     width: 100%;
-    padding: 10px 16px;
+    min-height: 44px;
+    padding: 12px 16px;
     font-size: 13px;
   }
 }
